@@ -10,7 +10,7 @@ export default class Header extends Component {
     return (
       <View style={styles.header}>
         <Image source={instagramLogo} style={styles.logo}  resizeMode="contain" />
-        <Feather name="inbox" size={27} color="black" />
+        <Feather name="inbox" size={27} color="black" style={styles.inbox}/>
       </View>
     )
   }
@@ -18,13 +18,16 @@ export default class Header extends Component {
 
 const styles = StyleSheet.create({
   header: {
-    flexDirection: 'row',
+    flexDirection: 'row-reverse',
     backgroundColor: '#f3f6fa',
     alignItems: 'center',
-    justifyContent: 'space-between',
   },
   logo: {
     flex: 1,
     height: 40,
   },
+  inbox: {
+    position: 'absolute',
+    paddingRight: 5,
+  }
 });
